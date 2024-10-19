@@ -1,3 +1,4 @@
+import { API_CLASS_ENDPOINT, API_MEDICINE_ENDPOINT } from "./config.js";
 document.addEventListener("DOMContentLoaded", () => {
   const openIcon = document.getElementById("menuIcon");
   const menu = document.getElementById("menu");
@@ -21,9 +22,6 @@ document.addEventListener("DOMContentLoaded", () => {
   const medicineLoading = document.getElementById("medicineLoading");
 
   let medicines = [];
-
-  const API_CLASS_ENDPOINT = process.env.API_CLASS_ENDPOINT;
-  const API_MEDICINE_ENDPOINT = process.env.API_MEDICINE_ENDPOINT;
 
   async function fetchMedicineClass() {
     try {
