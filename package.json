@@ -1,0 +1,16 @@
+{
+  "name": "e-lab",
+  "version": "1.0.0",
+  "description": "Laboratory Management Application",
+  "main": "index.js",
+  "scripts": {
+    "dev": "live-server --port=8080",
+    "build": "echo 'No build step needed for vanilla JS' && exit 0",
+    "start": "live-server --port=8080"
+  },
+  "author": "Emmanuel Esan",
+  "license": "ISC",
+  "dependencies": {
+    "live-server": "^1.2.1"
+  }
+}
