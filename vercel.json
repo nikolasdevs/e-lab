@@ -1,0 +1,9 @@
+{
+  "version": 2,
+  "routes": [
+    {
+      "src": "/config/(.*)",
+      "dest": "config/index.js"
+    }
+  ]
+}
