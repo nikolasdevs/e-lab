@@ -1,4 +1,4 @@
-import config from "./config.js";
+import { API_CLASS_ENDPOINT, API_MEDICINE_ENDPOINT } from "./config.js";
 document.addEventListener("DOMContentLoaded", () => {
   const openIcon = document.getElementById("menuIcon");
   const menu = document.getElementById("menu");
@@ -25,7 +25,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
   async function fetchMedicineClass() {
     try {
-      const response = await fetch(config.API_CLASS_ENDPOINT);
+      const response = await fetch(API_CLASS_ENDPOINT);
       if (!response.ok) {
         throw new Error(
           `Error fetching data: ${response.status} ${response.statusText}`
@@ -80,7 +80,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
       searchMedicineList.style.display = "block";
 
-      const response = await fetch(`${config.API_MEDICINE_ENDPOINT}/${classId}`);
+      const response = await fetch(`${API_MEDICINE_ENDPOINT}/${classId}`);
       if (!response.ok) {
         throw new Error(
           `Error fetching medicines: ${response.status} ${response.statusText}`
