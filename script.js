@@ -1,3 +1,4 @@
+import { API_CLASS_ENDPOINT, API_MEDICINE_ENDPOINT } from "./config.js";
 document.addEventListener("DOMContentLoaded", () => {
   const openIcon = document.getElementById("menuIcon");
   const menu = document.getElementById("menu");
@@ -20,17 +21,7 @@ document.addEventListener("DOMContentLoaded", () => {
   const instructionInput = document.getElementById("instruction");
   const medicineLoading = document.getElementById("medicineLoading");
 
-
   let medicines = [];
-
-  const API_CLASS_ENDPOINT =
-    "http://cliniqueplushealthcare.com.ng/prescriptions/drug_class";
-
-  const API_MEDICINE_ENDPOINT =
-    "https://cliniqueplushealthcare.com.ng/prescriptions/get_drug_class_by_id";
-
-  // const API_ALL_MEDICINE_ENDPOINT =
-  //   "https://cliniqueplushealthcare.com.ng/prescriptions/all_medicine/";
 
   async function fetchMedicineClass() {
     try {
