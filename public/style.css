@@ -653,6 +653,7 @@ form button {
   width: 100%;
   position: absolute;
   z-index: 99;
+  height: 100%;
   display: none;
   transition: top 0.5s ease;
   padding-inline: 0.5rem;
