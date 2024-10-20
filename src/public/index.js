@@ -1,8 +1,11 @@
+const API_CLASS_ENDPOINT =
+  "https://cliniqueplushealthcare.com.ng/prescriptions/drug_class";
+const API_MEDICINE_ENDPOINT =
+  "https://cliniqueplushealthcare.com.ng/prescriptions/get_drug_class_by_id";
 
+// const apiClassEndpoint = process.env.API_CLASS_ENDPOINT;
+// const apiMedicineEndpoint = process.env.API_MEDICINE_ENDPOINT;
 
-const apiClassEndpoint = process.env.API_CLASS_ENDPOINT;
-const apiMedicineEndpoint = process.env.API_MEDICINE_ENDPOINT;
-console.log(apiClassEndpoint);
 document.addEventListener("DOMContentLoaded", () => {
   const openIcon = document.getElementById("menuIcon");
   const menu = document.getElementById("menu");
@@ -29,7 +32,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
   async function fetchMedicineClass() {
     try {
-      const response = await fetch(apiClassEndpoint);
+      const response = await fetch(API_CLASS_ENDPOINT);
       if (!response.ok) {
         throw new Error(
           `Error fetching data: ${response.status} ${response.statusText}`
@@ -84,7 +87,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
       searchMedicineList.style.display = "block";
 
-      const response = await fetch(`${apiMedicineEndpoint}/${classId}`);
+      const response = await fetch(`${API_MEDICINE_ENDPOINT}/${classId}`);
       if (!response.ok) {
         throw new Error(
           `Error fetching medicines: ${response.status} ${response.statusText}`
